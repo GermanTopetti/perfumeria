@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PerfumesPro — Gestión de Inventario</title>
+  <meta name="description" content="Compará precios de perfumes entre proveedores" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#1a1a2e" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div>
+          <span class="logo">PerfumesPro</span>
+          <span class="logo-sub">gestión de inventario</span>
+        </div>
+        <button class="sidebar-close" id="sidebarClose">✕</button>
+      </div>
+      <nav class="nav">
+        <a href="#" class="nav-item active" data-view="dashboard">
+          <span class="nav-icon">📊</span> Dashboard
+        </a>
+        <a href="#" class="nav-item" data-view="perfumes">
+          <span class="nav-icon">🧴</span> Perfumes
+        </a>
+        <a href="#" class="nav-item" data-view="proveedores">
+          <span class="nav-icon">🏭</span> Proveedores
+        </a>
+        <a href="#" class="nav-item" data-view="comparar">
+          <span class="nav-icon">⚖️</span> Comparar Precios
+        </a>
+        <a href="#" class="nav-item" data-view="stock">
+          <span class="nav-icon">📦</span> Stock
+        </a>
+        <a href="#" class="nav-item" data-view="exportar">
+          <span class="nav-icon">📤</span> Exportar
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <h1 class="topbar-title" id="pageTitle">Dashboard</h1>
+        <div class="topbar-actions" id="topbarActions"></div>
+        <button class="theme-toggle" id="themeToggle" title="Cambiar tema">🌙</button>
+      </header>
+
+      <div class="content" id="content">
+        <!-- Views rendered by JS -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle">Título</h2>
+        <button class="modal-close" id="modalClose">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
